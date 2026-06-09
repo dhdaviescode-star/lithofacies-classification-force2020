@@ -11,7 +11,7 @@
 This repository contains the complete code and figures for the manuscript:
 
 > *"Automated Lithofacies Classification from Well Logs Using Random Forest: A Benchmark Study on the FORCE 2020 Dataset"*  
-> (Under review at *Computers & Geosciences*)
+> (Under review at **)
 
 A Random Forest classifier was developed to automatically classify lithofacies from standard well logs, achieving **90.6% accuracy** on the FORCE 2020 dataset (21 wells, 258,903 depth samples).
 
@@ -48,8 +48,8 @@ lithofacies-classification-force2020/
 ├── confusion_matrix.png               # Figure 2 (publication-ready)
 ├── feature_importance.png             # Figure 3 (publication-ready)
 ├── lithofacies_distribution.png       # Figure 1 (publication-ready)
-└── notebooks/                         # (Coming soon)
-    └── main_analysis.ipynb            # Complete Colab workflow
+└── notebooks/                         # (Contains Well_log_Research.ipynb)
+    └── Well_log_Research.ipynb            # Complete Colab workflow
 ```
 
 ---
@@ -138,7 +138,7 @@ kaggle>=1.5.0
 
 If you use this code or data in your research, please cite:
 
-> Davies, D.H. (2026). Automated Lithofacies Classification from Well Logs Using Random Forest: A Benchmark Study on the FORCE 2020 Dataset. *[Manuscript under review at Computers & Geosciences]*. Code available at: https://github.com/dhdaviescode-star/lithofacies-classification-force2020
+> Davies, D.H. (2026). Automated Lithofacies Classification from Well Logs Using Random Forest: A Benchmark Study on the FORCE 2020 Dataset. *[Manuscript under review at ***]*. Code available at: https://github.com/dhdaviescode-star/lithofacies-classification-force2020
 
 ---
 
@@ -175,7 +175,7 @@ For PhD supervision inquiries or collaboration on CCUS, reservoir geomechanics, 
 - [x] Random Forest model training (90.6% accuracy)
 - [x] Figures generation (300 DPI)
 - [x] GitHub repository setup
-- [ ] Full Jupyter notebook upload (coming soon)
+- [ ] Full Jupyter notebook upload (Well_log_Research.ipynb)
 - [ ] Conda environment specification (coming soon)
 - [ ] Docker container (future)
 
