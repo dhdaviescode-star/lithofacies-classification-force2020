@@ -26,6 +26,22 @@ A Random Forest classifier was developed to automatically classify lithofacies f
 | Test Samples | 30,776 |
 | Wells Integrated | 21 |
 
+## Random Forest Model Specification
+
+- **Number of trees:** 100 (`n_estimators=100`)
+- **Voting mechanism:** Hard majority voting
+- **Feature subspace:** √p = 2 features per split (p = 5 total)
+
+### Voting Equation
+
+The ensemble predicts the class with the majority of tree votes:
+
+`ŷ = mode { h₁(x), h₂(x), ..., h₁₀₀(x) }`
+
+or formally: `ŷ = argmax_c Σ_{t=1}^{100} 𝕀(h_t(x) = c)`
+
+where 𝕀(·) is the indicator function and c is a lithofacies class.
+
 ### Feature Importance Ranking
 
 | Feature | Importance |
