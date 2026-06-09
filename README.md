@@ -11,7 +11,7 @@
 This repository contains the complete code and figures for the manuscript:
 
 > *"Automated Lithofacies Classification from Well Logs Using Random Forest: A Benchmark Study on the FORCE 2020 Dataset"*  
-> (Under review at **)
+> (Manuscript in preparation)
 
 A Random Forest classifier was developed to automatically classify lithofacies from standard well logs, achieving **90.6% accuracy** on the FORCE 2020 dataset (21 wells, 258,903 depth samples).
 
