@@ -175,7 +175,7 @@ For PhD supervision inquiries or collaboration on CCUS, reservoir geomechanics, 
 - [x] Random Forest model training (90.6% accuracy)
 - [x] Figures generation (300 DPI)
 - [x] GitHub repository setup
-- [ ] Full Jupyter notebook upload (Well_log_Research.ipynb)
+- [x] Full Jupyter notebook upload (Well_log_Research.ipynb)
 - [ ] Conda environment specification (coming soon)
 - [ ] Docker container (future)
 
