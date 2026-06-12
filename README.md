@@ -61,9 +61,9 @@ lithofacies-classification-force2020/
 ├── README.md                          # This file
 ├── requirements.txt                   # Python dependencies
 ├── LICENSE                            # MIT License
-├── confusion_matrix.png               # Figure 2 (publication-ready)
-├── feature_importance.png             # Figure 3 (publication-ready)
-├── lithofacies_distribution.png       # Figure 1 (publication-ready)
+├── figures/figure2_confusion_matrix.png               # Figure 2 (publication-ready)
+├── figures/figure3_feature_importance.png             # Figure 3 (publication-ready)
+├── figures/figure1_distribution.png       # Figure 1 (publication-ready)
 └── notebooks/                         # (Contains Well_log_Research.ipynb)
     └── Well_log_Research.ipynb            # Complete Colab workflow
 ```
@@ -127,9 +127,9 @@ The **FORCE 2020 Well Logs Dataset** (Azzam, 2020) is publicly available on Kagg
 
 | Figure | File | Description |
 |--------|------|-------------|
-| Figure 1 | `lithofacies_distribution.png` | Class distribution in training dataset (n=102,588) |
-| Figure 2 | `confusion_matrix.png` | Confusion matrix for test set predictions |
-| Figure 3 | `feature_importance.png` | Random Forest feature importance ranking |
+| Figure 1 | `figures/figure1_distribution.png` | Class distribution in training dataset (n=102,588) |
+| Figure 2 | `figures/figure2_confusion_matrix.png` | Confusion matrix for test set predictions |
+| Figure 3 | `figures/figure3_feature_importance.png` | Random Forest feature importance ranking |
 
 All figures are saved at **300 DPI**, publication-ready.
 
@@ -204,7 +204,7 @@ For PhD supervision inquiries or collaboration on CCUS, reservoir geomechanics, 
 
 The model was tested on well 31_6-8 (9,481 samples, held out from training), achieving **96.4% accuracy**.
 
-![Figure 4](predicted_vs_actual.png)
+![Figure 4](figures/figure4_depth_track.png)
 
 *Figure 4: Depth-track comparison of true versus predicted lithofacies for well 31_6-8 from the test set. Left: true lithology; middle: Random Forest predictions; right: correct predictions (green) versus errors (red). Perfect classification is observed in the uniform shale interval (690-721 m). Mismatches occur primarily in transitional zones where log responses overlap. Depth increases downward following petrophysical convention (Al-Mudhafar 2020; Hall 2016).*
 
