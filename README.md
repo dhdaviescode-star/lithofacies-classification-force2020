@@ -198,3 +198,24 @@ For PhD supervision inquiries or collaboration on CCUS, reservoir geomechanics, 
 ---
 
 *Last updated: June 2026*
+
+
+## Figure 4: Depth-Track Visualization
+
+The model was tested on well 31_6-8 (9,481 samples, held out from training), achieving **96.4% accuracy**.
+
+![Figure 4](predicted_vs_actual.png)
+
+*Figure 4: Depth-track comparison of true versus predicted lithofacies for well 31_6-8 from the test set. Left: true lithology; middle: Random Forest predictions; right: correct predictions (green) versus errors (red). Perfect classification is observed in the uniform shale interval (690-721 m). Mismatches occur primarily in transitional zones where log responses overlap. Depth increases downward following petrophysical convention (Al-Mudhafar 2020; Hall 2016).*
+
+---
+
+## Updated Results Summary
+
+| Metric | Result |
+|--------|--------|
+| Overall Accuracy | 90.6% |
+| Blind Well Accuracy (31_6-8) | 96.4% |
+| Most Important Feature | NPHI (22.7%) |
+| Second Most Important | GR (22.5%) |
+
