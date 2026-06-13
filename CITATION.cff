@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Automated Lithofacies Classification from Well Logs Using Random Forest: A Benchmark Study on the FORCE 2020 Dataset"
+authors:
+- family-names: "Davies"
+  given-names: "Dein Honour"
+  orcid: "https://orcid.org/0009-0006-7597-256X"
+date-released: 2026-06-13
+url: "https://github.com/dhdaviescode-star/lithofacies-classification-force2020"
+repository-code: "https://github.com/dhdaviescode-star/lithofacies-classification-force2020"
+doi: "10.5281/zenodo.20680430"
+version: "v1.0-benchmark-force2020"
+license: "MIT"
+keywords:
+  - lithofacies-classification
+  - random-forest
+  - well-logs
+  - machine-learning
+  - force-2020
+  - ccus

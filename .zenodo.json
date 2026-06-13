@@ -1,0 +1,25 @@
+{
+  "title": "Automated Lithofacies Classification from Well Logs Using Random Forest: A Benchmark Study on the FORCE 2020 Dataset",
+  "description": "A Random Forest classifier for automated lithofacies classification using the FORCE 2020 dataset, achieving 90.6% accuracy. Includes code, trained models, and evaluation results.",
+  "creators": [
+    {
+      "name": "Davies, Dein Honour",
+      "orcid": "0009-0006-7597-256X",
+      "affiliation": "Rivers State University",
+      "role": "Researcher",
+      "email": "davies.dein@ust.edu.ng"
+    }
+  ],
+  "keywords": [
+    "lithofacies classification",
+    "random forest",
+    "well logs",
+    "machine learning",
+    "FORCE 2020",
+    "CCUS",
+    "reservoir characterization"
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open"
+}
