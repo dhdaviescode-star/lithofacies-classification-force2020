@@ -1,4 +1,5 @@
 # Automated Lithofacies Classification from Well Logs Using Random Forest
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20680430.svg)](https://doi.org/10.5281/zenodo.20680430)
 
 **Author:** Dein Honour Davies  
 **ORCID:** 0009-0006-7597-256X  
@@ -10,7 +11,7 @@
 
 This repository contains the complete code and figures for the manuscript:
 
-> *"Automated Lithofacies Classification from Well Logs Using Random Forest: A Benchmark Study on the FORCE 2020 Dataset"*  
+> _"Automated Lithofacies Classification from Well Logs Using Random Forest: A Benchmark Study on the FORCE 2020 Dataset"_  
 > (Manuscript in preparation)
 
 A Random Forest classifier was developed to automatically classify lithofacies from standard well logs, achieving **90.6% accuracy** on the FORCE 2020 dataset (21 wells, 258,903 depth samples).
@@ -19,12 +20,12 @@ A Random Forest classifier was developed to automatically classify lithofacies f
 
 ## Key Results
 
-| Metric | Result |
-|--------|--------|
+| Metric               | Result    |
+| -------------------- | --------- |
 | **Overall Accuracy** | **90.6%** |
-| Training Samples | 102,588 |
-| Test Samples | 30,776 |
-| Wells Integrated | 21 |
+| Training Samples     | 102,588   |
+| Test Samples         | 30,776    |
+| Wells Integrated     | 21        |
 
 ## Random Forest Model Specification
 
@@ -44,13 +45,13 @@ where 𝕀(·) is the indicator function and c is a lithofacies class.
 
 ### Feature Importance Ranking
 
-| Feature | Importance |
-|---------|------------|
-| Neutron Porosity (NPHI) | 22.7% |
-| Gamma Ray (GR) | 22.5% |
-| Sonic Transit Time (DTC) | 20.5% |
-| Bulk Density (RHOB) | 17.9% |
-| Deep Resistivity (RDEP) | 16.4% |
+| Feature                  | Importance |
+| ------------------------ | ---------- |
+| Neutron Porosity (NPHI)  | 22.7%      |
+| Gamma Ray (GR)           | 22.5%      |
+| Sonic Transit Time (DTC) | 20.5%      |
+| Bulk Density (RHOB)      | 17.9%      |
+| Deep Resistivity (RDEP)  | 16.4%      |
 
 ---
 
@@ -58,14 +59,21 @@ where 𝕀(·) is the indicator function and c is a lithofacies class.
 
 ```
 lithofacies-classification-force2020/
-├── README.md                          # This file
-├── requirements.txt                   # Python dependencies
-├── LICENSE                            # MIT License
-├── figures/figure2_confusion_matrix.png               # Figure 2 (publication-ready)
-├── figures/figure3_feature_importance.png             # Figure 3 (publication-ready)
-├── figures/figure1_distribution.png       # Figure 1 (publication-ready)
-└── notebooks/                         # (Contains Well_log_Research.ipynb)
-    └── Well_log_Research.ipynb            # Complete Colab workflow
+├── README.md
+├── requirements.txt
+├── LICENSE
+├── .gitignore
+├── figures/
+│   ├── figure1_distribution.png
+│   ├── figure2_confusion_matrix.png
+│   ├── figure3_feature_importance.png
+│   └── figure4_depth_track.png
+├── data/
+│   └── README.md
+├── results/
+│   └── classification_report.txt
+└── notebooks/
+    └── 01_force2020_analysis.ipynb
 ```
 
 ---
@@ -102,6 +110,7 @@ pip install -r requirements.txt
 **Option A: Google Colab (Recommended)**
 
 Open Google Colab and run the following cells to:
+
 - Download the FORCE 2020 dataset
 - Load and combine 21 wells
 - Train the Random Forest model
@@ -125,11 +134,11 @@ The **FORCE 2020 Well Logs Dataset** (Azzam, 2020) is publicly available on Kagg
 
 ## Figures
 
-| Figure | File | Description |
-|--------|------|-------------|
-| Figure 1 | `figures/figure1_distribution.png` | Class distribution in training dataset (n=102,588) |
-| Figure 2 | `figures/figure2_confusion_matrix.png` | Confusion matrix for test set predictions |
-| Figure 3 | `figures/figure3_feature_importance.png` | Random Forest feature importance ranking |
+| Figure   | File                                     | Description                                        |
+| -------- | ---------------------------------------- | -------------------------------------------------- |
+| Figure 1 | `figures/figure1_distribution.png`       | Class distribution in training dataset (n=102,588) |
+| Figure 2 | `figures/figure2_confusion_matrix.png`   | Confusion matrix for test set predictions          |
+| Figure 3 | `figures/figure3_feature_importance.png` | Random Forest feature importance ranking           |
 
 All figures are saved at **300 DPI**, publication-ready.
 
@@ -154,7 +163,7 @@ kaggle>=1.5.0
 
 If you use this code or data in your research, please cite:
 
-> Davies, D.H. (2026). Automated Lithofacies Classification from Well Logs Using Random Forest: A Benchmark Study on the FORCE 2020 Dataset. *[Manuscript under review at ***]*. Code available at: https://github.com/dhdaviescode-star/lithofacies-classification-force2020
+> Davies, D.H. (2026). Automated Lithofacies Classification from Well Logs Using Random Forest: A Benchmark Study on the FORCE 2020 Dataset. \*[Manuscript under review at ***]\*. Code available at: https://github.com/dhdaviescode-star/lithofacies-classification-force2020
 
 ---
 
@@ -191,14 +200,13 @@ For PhD supervision inquiries or collaboration on CCUS, reservoir geomechanics, 
 - [x] Random Forest model training (90.6% accuracy)
 - [x] Figures generation (300 DPI)
 - [x] GitHub repository setup
-- [x] Full Jupyter notebook upload (Well_log_Research.ipynb)
+- [x] Full Jupyter notebook upload (01_force2020_analysis.ipynb)
 - [ ] Conda environment specification (coming soon)
 - [ ] Docker container (future)
 
 ---
 
-*Last updated: June 2026*
-
+_Last updated: June 2026_
 
 ## Figure 4: Depth-Track Visualization
 
@@ -206,16 +214,15 @@ The model was tested on well 31_6-8 (9,481 samples, held out from training), ach
 
 ![Figure 4](figures/figure4_depth_track.png)
 
-*Figure 4: Depth-track comparison of true versus predicted lithofacies for well 31_6-8 from the test set. Left: true lithology; middle: Random Forest predictions; right: correct predictions (green) versus errors (red). Perfect classification is observed in the uniform shale interval (690-721 m). Mismatches occur primarily in transitional zones where log responses overlap. Depth increases downward following petrophysical convention (Al-Mudhafar 2020; Hall 2016).*
+_Figure 4: Depth-track comparison of true versus predicted lithofacies for well 31_6-8 from the test set. Left: true lithology; middle: Random Forest predictions; right: correct predictions (green) versus errors (red). Perfect classification is observed in the uniform shale interval (690-721 m). Mismatches occur primarily in transitional zones where log responses overlap. Depth increases downward following petrophysical convention (Al-Mudhafar 2020; Hall 2016)._
 
 ---
 
 ## Updated Results Summary
 
-| Metric | Result |
-|--------|--------|
-| Overall Accuracy | 90.6% |
-| Blind Well Accuracy (31_6-8) | 96.4% |
-| Most Important Feature | NPHI (22.7%) |
-| Second Most Important | GR (22.5%) |
-
+| Metric                       | Result       |
+| ---------------------------- | ------------ |
+| Overall Accuracy             | 90.6%        |
+| Blind Well Accuracy (31_6-8) | 96.4%        |
+| Most Important Feature       | NPHI (22.7%) |
+| Second Most Important        | GR (22.5%)   |
